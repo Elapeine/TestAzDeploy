@@ -2,9 +2,17 @@ name: Call a reusable workflow
 on:
   workflow_dispatch:  
 jobs:
-  call-workflow-passing-data:
+  call-workflow-passing-mona:
     uses: Elapeine/TestAzDeploy/.github/workflows/worflow-1.yml@main
     with:
       username: mona
    # secrets:
    #   token: ${{ secrets.TOKEN }}
+   
+  call-workflow-passing-eric:
+    uses: Elapeine/TestAzDeploy/.github/workflows/worflow-1.yml@main
+    with:
+      username: eric
+   # secrets:
+   #   token: ${{ secrets.TOKEN }}
+
