@@ -29,6 +29,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script 
-        run: echo Hello,  ${{ inputs.username }}
+        run: echo Hello,  ${{ inputs.username }} , Day of Week = ${{ env.DAY_OF_WEEK}}
 
      
