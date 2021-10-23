@@ -28,5 +28,5 @@ jobs:
    runs-on: ubuntu-latest
    steps:
       - name: "display "
-        run: echo "${{ env.action_state }}"
+        run: echo ok =  "${{ env.action_state }}"
 
