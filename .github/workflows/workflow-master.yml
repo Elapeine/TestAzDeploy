@@ -21,6 +21,17 @@ jobs:
    # secrets:
    #   token: ${{ secrets.TOKEN }}
    
+  call-add-myvault-secret:
+   name: add keyvault secret
+   needs: call-workflow-passing-eric
+   uses: Elapeine/TestAzDeploy/.github/workflows/addkeyvaultsecret.xml@main
+   with:
+     keyvaultname: mykeyvault
+     secretname: mysecretkey
+     secretvalue: mysecretvalue
+   # secrets:
+   #   token: ${{ secrets.TOKEN }}
+   
   otherjob: 
    needs: call-workflow-passing-eric
    name: other job
