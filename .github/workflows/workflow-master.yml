@@ -1,6 +1,8 @@
 name: Call a reusable workflow
 on:
   workflow_dispatch:  
+env:
+      DAY_OF_WEEK: Mon
 jobs:
   call-workflow-passing-mona:
     name: Job 1
