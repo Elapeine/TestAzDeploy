@@ -1,12 +1,8 @@
 name: Master Call a reusable workflow
 
 on:
-  pull_request:
-    branches:
-      - main
-
+  workflow_dispatch:  
 jobs:
-
   call-workflow-passing-data:
     uses: Elapeine/TestAzDeploy/.github/workflows/worflow-1.yml.yml@main
     with:
