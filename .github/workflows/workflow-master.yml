@@ -3,6 +3,7 @@ on:
   workflow_dispatch:  
 jobs:
   call-workflow-passing-mona:
+    name: Job 1
     uses: Elapeine/TestAzDeploy/.github/workflows/worflow-1.yml@main
     with:
       username: mona
@@ -10,9 +11,11 @@ jobs:
    #   token: ${{ secrets.TOKEN }}
    
   call-workflow-passing-eric:
-    uses: Elapeine/TestAzDeploy/.github/workflows/worflow-1.yml@main
-    with:
-      username: eric
+   name: Job 2
+   needs: call-workflow-passing-mona
+   uses: Elapeine/TestAzDeploy/.github/workflows/worflow-1.yml@main
+   with:
+     username: eric
    # secrets:
    #   token: ${{ secrets.TOKEN }}
 
