@@ -8,7 +8,7 @@ on:
 jobs:
 
   call-workflow-passing-data:
-    uses: Elapeine/TestAzDeploy/.github/workflows/workflow-B.yml@main
+    uses: Elapeine/TestAzDeploy/.github/workflows/worflow-1.yml.yml@main
     with:
       username: mona
    # secrets:
