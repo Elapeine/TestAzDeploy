@@ -20,4 +20,7 @@ jobs:
      username: eric
    # secrets:
    #   token: ${{ secrets.TOKEN }}
+   
+  otherjob:   
+  -run echo echo "${{ env.action_state }}"
 
